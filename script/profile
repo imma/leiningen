@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+function profile {
+  local shome="$(cd -P -- "$(dirname -- "$BASH_SOURCE")/.." && pwd -P)"
+  PATH="$shome/bin:$shome/exec:$PATH"
+  
+  export LEIN_HOME="$shome"
+}
+
+profile
