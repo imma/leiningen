@@ -4,7 +4,7 @@ function bootstrap {
   local shome="$(cd -P -- "$(dirname -- "$BASH_SOURCE")/.." && pwd -P)"
   source "$shome/script/profile"
 
-  "$shome/bin/lein" > /dev/null
+  "$shome/bin/lein" >/dev/null || true
 }
 
 bootstrap
