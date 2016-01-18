@@ -5,6 +5,13 @@ function bootstrap {
   source "$shome/script/profile"
 
   pkg ensure misc/rlwrap
+
+  case "$(uname -s)" in
+    Linux)
+      aptitude -y install openjdk-7-jdk
+      ;;
+  esac
+
   "$shome/bin/lein" >/dev/null || true
 }
 
