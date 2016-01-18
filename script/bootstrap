@@ -8,7 +8,8 @@ function bootstrap {
 
   case "$(uname -s)" in
     Linux)
-      aptitude -y install openjdk-7-jdk
+      sudo update
+      sudo aptitude -y install openjdk-7-jdk
       ;;
   esac
 
