@@ -6,12 +6,6 @@ function bootstrap {
 
   pkg ensure misc/rlwrap
 
-  case "$(uname -s)" in
-    Linux)
-      sudo aptitude -y install openjdk-7-jdk
-      ;;
-  esac
-
   "$shome/bin/lein" >/dev/null || true
 }
 
