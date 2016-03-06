@@ -1,5 +1,4 @@
-Setup
-=====
+Updates
+=======
 
-For bash, source `script/profile` to expose the `lein` command.  Requires the
-`defn/app` project installed and sourced.
+`bin/lein` comes from https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
