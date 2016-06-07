@@ -1,4 +1,1 @@
-Updates
-=======
-
-`bin/lein` comes from https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
+Visit http://defn.sh/leiningen/ or open `docs/index.html`
