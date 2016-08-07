@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-function profile {
+function _leiningen_profile {
   local shome="${_leiningen_home:-"$(cd -P -- "$(dirname -- "$BASH_SOURCE")/.." && pwd -P)"}"
   PATH="$shome/bin:$PATH"
   
   export LEIN_HOME="$shome"
 }
 
-profile
+_leiningen_profile
