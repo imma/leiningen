@@ -4,7 +4,7 @@ function version {
   local shome="${_leiningen_home:-"$(cd -P -- "$(dirname -- "$BASH_SOURCE")/.." && pwd -P)"}"
   source "$shome/script/profile"
 
-  local ver_lein="$(lein --version 2>&- | awk '{print $2}' || true)"
+  local ver_lein="$(lein --version 2>/dev/null | awk '{print $2}' || true)"
   jq -n --arg lein "$ver_lein" '{leiningen: $lein}'
 }
 
