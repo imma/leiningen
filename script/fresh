@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
-function bootstrap {
+function main {
   local shome="$(cd -P -- "${BASH_SOURCE%/*}/.." && pwd -P)"
   source "$shome/script/profile"
 
-  if [[ -f "$shome/self-installs/leiningen-2.6.1-standalone.jar" ]]; then
+  if [[ "$($shome/script/version | jq -r '.lein')" != "$LEIN_VERSION" ]]; then
     return 1
   fi
 
   return 0
 }
 
-bootstrap
+source sub "$0" "$@"

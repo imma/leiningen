@@ -5,6 +5,7 @@ function _leiningen_profile {
   PATH="$shome/bin:$PATH"
   
   export LEIN_HOME="$shome"
+  export LEIN_VERSION='2.7.1'
 }
 
 _leiningen_profile
